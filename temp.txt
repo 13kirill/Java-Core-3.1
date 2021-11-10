@@ -1,0 +1,26 @@
+Создан Games\src
+Games\res
+Games\savegames
+Games\temp
+Games\src\main
+Games\src\test
+Games\res\drawables
+Games\res\c
+Games\res\icons
+Games\src\main\Main.java
+Games\src\main\Utils.java
+Games\temp\temp.txt
+!Созданы: 
+Games\src
+Games\res
+Games\savegames
+Games\temp
+Games\src\main
+Games\src\test
+Games\res\drawables
+Games\res\c
+Games\res\icons
+Games\src\main\Main.java
+Games\src\main\Utils.java
+Games\temp\temp.txt
+!

@@ -12,7 +12,7 @@ public class Main {
         loading();
     }
 
-    private static void makeFile(String name) {
+    private static String makeFile(String name) {
         File file = new File(name);
         try {
             if (file.createNewFile())
@@ -20,12 +20,14 @@ public class Main {
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
+        return name;
     }
 
-    private static void makeDir(String name) {
+    private static String makeDir(String name) {
         File dir = new File(name);
         if (dir.mkdir())
             System.out.println("Каталог " + name + " создан");
+        return name;
     }
 
     private static void fileDelete(String name) {
@@ -40,34 +42,33 @@ public class Main {
 
     private static void install() {
 
-        makeDir("Games/src");
-        makeDir("Games/res");
-        makeDir("Games/savegames");
-        makeDir("Games/temp");
-        makeDir("Games/src/main");
-        makeDir("Games/src/test");
-        makeFile("Games/src/main/Main.java");
-        makeFile("Games/src/main/Utils.java");
-        makeDir("Games/res/drawables");
-        makeDir("Games/res/vectors");
-        makeDir("Games/res/icons");
-        makeFile("Games/temp/temp.txt");
+        String Dir1 = makeDir("Games/src");
+        String Dir2 = makeDir("Games/res");
+        String Dir3 = makeDir("Games/savegames");
+        String Dir4 = makeDir("Games/temp");
+        String Dir5 = makeDir("Games/src/main");
+        String Dir6 = makeDir("Games/src/test");
+        String File1 = makeFile("Games/src/main/Main.java");
+        String File2 = makeFile("Games/src/main/Utils.java");
+        String Dir7 = makeDir("Games/res/drawables");
+        String Dir8 = makeDir("Games/res/vectors");
+        String Dir9 = makeDir("Games/res/icons");
+        String File3 = makeFile("Games/temp/temp.txt");
 
 
-//        StringBuilder sb = new StringBuilder();
-//        sb.append("Созданы: " + '\n' +; +'\n' + dir2 + '\n' + dir3 + '\n' + dir4 + '\n' + dir5 + '\n' +
-//                dir6 + '\n' + dir7 + '\n' + dir8 + '\n' + dir9 + '\n' +
-//                myFile1 + '\n' + myFile2 + '\n' + myFile3);
-//        String text = sb.toString();
-//
-//        try (FileWriter writer = new FileWriter("temp.txt", true)) {
-//
-//            writer.write(text);
-//            writer.append('\n');
-//            writer.flush();
-//        } catch (IOException ex) {
-//            System.out.println(ex.getMessage());
-//        }
+        StringBuilder sb = new StringBuilder();
+        sb.append("Созданы: " + '\n' + Dir1 + '\n' + Dir2 + '\n' + Dir3 + '\n' + Dir4 + '\n' + Dir5 + '\n' +
+                Dir6 + '\n' + Dir7 + '\n' + Dir8 + '\n' + Dir9 + '\n' + File1 + '\n' + File2 + '\n' + File3);
+        String text = sb.toString();
+
+        try (FileWriter writer = new FileWriter("Games/temp/temp.txt", true)) {
+
+            writer.write(text);
+            writer.append('\n');
+            writer.flush();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
     }
 
     private static void saveGame() {

@@ -1,0 +1,13 @@
+Созданы: 
+Games/src
+Games/res
+Games/savegames
+Games/temp
+Games/src/main
+Games/src/test
+Games/res/drawables
+Games/res/vectors
+Games/res/icons
+Games/src/main/Main.java
+Games/src/main/Utils.java
+Games/temp/temp.txt
